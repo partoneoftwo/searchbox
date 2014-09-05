@@ -1,0 +1,33 @@
+#!/bin/bash
+# This file will update the search database
+# v2
+
+REPOSITORYPATH=/mnt/cyberdyne.library
+
+echo "Updating of file database in progress"
+date
+
+
+
+# Generate new filelist books
+echo "[] books"
+cd $REPOSITORYPATH
+time find . 1>/tmp/books.txt 2>/tmp/books.txt
+
+
+# Mysql statements
+echo "[] database synthesis"
+time mysql --force --local-infile=1 -u usernames -ppassword </etc/cron.daily/thefile.sql
+
+
+
+# cleanup
+echo "[] housework"
+cp /tmp/books.txt $REPOSITORYPATH/filelist.books.current.txt
+
+echo "[] cleanup"
+rm /tmp/books.txt
+
+
+date
+echo "[] done"
