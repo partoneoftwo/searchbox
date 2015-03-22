@@ -12,7 +12,7 @@
 </head>
 
 <center>
-<a href=/library ><img src=bfolder.png></a>
+<a href=/books ><img src=bfolder.png></a>
 
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">

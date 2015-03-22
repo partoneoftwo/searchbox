@@ -1,0 +1,36 @@
+#!/bin/bash
+# This file will update the search database
+# v5 postgresql
+echo thefile postgresql version
+# This method is deprechated by PostgreSQL, but still works. Like everything else
+# here, this is crude, but efficient.
+export PGPASSWORD=goodpassword
+set PGPASSWORD=goodpassword
+
+
+REPOSITORYPATH=/mnt/storagearray/library
+
+echo "Updating of file database in progress"
+date
+
+
+
+# Generate new filelist books
+echo "[] books"
+cd $REPOSITORYPATH
+time find -L . 1>/tmp/books.postgresql.txt 2>/tmp/books.postgresql.txt
+
+# Postgresql will synthesize by
+echo "[] database synthesis"
+time psql -w bdev thomas < /etc/cron.daily/thefile.postgresql.schema
+
+# cleanup
+echo "[] housework"
+cp /tmp/books.postgresql.txt $REPOSITORYPATH/filelist.books.current.txt
+
+#echo "[] cleanup"
+#rm /tmp/books.txt
+
+
+date
+echo "[] done"
