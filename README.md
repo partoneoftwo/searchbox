@@ -24,11 +24,11 @@ I created it because I needed a search engine for my files.
 
 
 Screenshot
-<img src="http://i.imgur.com/hH7PO87.png"/>
+<img src="http://i.imgur.com/u7k6bbd.png"/>
 
 
 #LICENSE#
-You can have this software for free.
+Searchbox is free and libre software.
 It is licensed under the MIT license.
 The complete license is available here:
 http://choosealicense.com/licenses/mit/
