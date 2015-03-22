@@ -11,10 +11,15 @@
 
 
 #INTRODUCTION#
-Searchbox is a search application that lets a user search for files on a
-computer. The user can download the search results directly in the
-interface. The program reads filenames generated from a filesystem
+Searchbox is a web based search application that lets the user search
+for files and download them from the browser.
+
+Surprisingly this was not available in a simple package elsewhere so I
+decided to write it myself.
+
+The program reads filenames generated from a filesystem
 command run in the shell and written to a file.
+
 I created it because I needed a search engine for my files.
 
 
