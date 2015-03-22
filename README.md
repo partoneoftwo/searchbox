@@ -27,11 +27,9 @@ Screenshot
 <img src="http://i.imgur.com/u7k6bbd.png"/>
 
 #DONATE#
-If you want to show appreciation and want to help support
+If you want to show appreciation and as well want to help support
 future development of Searchbox, then you can donate to me via Paypal.
-<a
-href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZKN42CRNGY9TJ"
-><img src="https://www.paypalobjects.com/webstatic/en_US/mktg/donations/donate_hand.png"</img></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZKN42CRNGY9TJ" ><img src="https://www.paypalobjects.com/webstatic/en_US/mktg/donations/donate_hand.png"</img></a>
 
 #LICENSE#
 Searchbox is free and libre software.
