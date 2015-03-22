@@ -94,7 +94,7 @@ uncomment all the lines in the .htaccess line (remove hashes #).
 
 #SECURITY NOTE#
 
-This application must not be used on the public internet or where untrusted users roam. The app is only intented to be run in closed of environments with trusted users.
+The application should only be used behind a password protected area.
 The code may very well not be secure. It is not using PDO's which makes it vulnerable to SQL Injection hacks.
 It is not within the scope of the project to make a security hardened solution for now.
 
@@ -143,10 +143,11 @@ Rewrite the entire UI with a jQuery library so that it becomes fancier.
 #CHANGELOG#
 v33 - 31.08.2014
 
-Mysql support ditched
-Data layer changed to postgresql
-New query in postgresql gives more precise results, slightly faster 
+* Mysql support ditched
+* Data layer changed to postgresql
+* New query in postgresql gives more precise results, slightly faster 
 and it feels a lot better to work on Postgresql.
+* Improvements made to design
 
 v29 - 05.09.2014
 
