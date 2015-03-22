@@ -137,26 +137,32 @@ Rewrite the entire UI with a jQuery library so that it becomes fancier.
 
 #CHANGELOG#
 v33 - 31.08.2014
+
 Mysql support ditched
 Data layer changed to postgresql
 New query in postgresql gives more precise results, slightly faster 
 and it feels a lot better to work on Postgresql.
 
 v29 - 05.09.2014
+
 Code somewhat refined. Output somewhat simplified.
 License changed to MIT.
 
 v27 - 03.09.2014
+
 The search log is now displayed, including timestamp and hit counter.
 
 v26 - 03.09.2014
+
 Added a search log. Every query is now stored in the database
 
 v24 - 31.08.2014
+
 Code ready for public release now
 Straighened code out a bit
 
 v23 - unknown date
+
 First acceptable stable version.
 An attempt at proper release documentation. Still not done ready to release
 to public. Will need some more code cleanup such as write some variables into the cronjob
