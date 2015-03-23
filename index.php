@@ -29,11 +29,6 @@
 
 <?php
 
-//
-// a html button dumped here because html doesn't allow easy commenting of lines 
-// <FORM><INPUT TYPE="button" onClick="parent.location='books/'" VALUE="I'd like to browse"></FORM>
-
-
 
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
@@ -51,47 +46,13 @@ if(isset($_GET['booksname'])){
 } 
 
 
-// disable all error messages 
-//error_reporting(E_ERROR | E_PARSE);
 
 require('settings.php');
 
 $con=pg_connect("host=$db_server dbname=$db_name user=$db_user password=$db_passwd");
-// Check connection
-//if (pg_connect_errno()) {
-//      echo "Failed to connect to MySQL: " . pg_connect_error();
-//}
-
-
-// make a value out of the total number of rows(books) in the archive 
-// $librarysize = pg_query("SELECT reltuples::bigint AS estimate FROM pg_class where relname='books'");
-// echo $librarysize;
-// pg_query("SELECT reltuples::bigint AS estimate FROM pg_class where relname='books'");
-
-
-
-
-// deprechated UTF-8 quirks needed in the mysql version
-// kept for posterity, until the sands of time washes it away.
-/////////////// Runtime enforce UTF-8 ////////////////////////////////
-//pg_query ("set character_set_client='utf8'");
-//pg_query ("set character_set_results='utf8'");
-//pg_query ("set collation_connection='utf8_general_ci'");
-//pg_set_client_encoding("LATIN_1");
-//  /* change character set to utf8 */
-//if (!$con->set_charset("utf8")) {
-//            printf("Error loading character set utf8: %s\n", $con->error);
-//} else {
-//            printf("Current character set: %s\n", $con->character_set_name());
-//}
-//echo htmlentities($row['name'], ENT_QUOTES, 'UTF-8'); // wip
-
-
-
 
 //////////////////////////// execute the search query //////////////////////
 // and subsequently display the results in a table
-// $query = ;
 
 if (empty($booksname)) {
         echo "<center>";
@@ -101,6 +62,10 @@ if (empty($booksname)) {
 }
 
 // get the search results
+// coming soon here - trigrams and tuples. Watch this space
+// this method is not secure - and is succeptible to sql injections. only use this app with trusted users
+// behind password protected areas folks!
+// could be written with pdo or with prepared statement
 $result = pg_query("SELECT * FROM books where filename  ~*('$booksname')");
 
 
@@ -164,11 +129,6 @@ while($row = pg_fetch_assoc($displaysearchlog)) {
 echo "</table>";
 
 
-
-
-
-// pg_close($con);
-// implode( array_values( get_html_translation_table( HTML_ENTITES ) ), "\t" )
 
   
 ?>
